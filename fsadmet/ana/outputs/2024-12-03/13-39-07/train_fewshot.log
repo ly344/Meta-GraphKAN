@@ -1,0 +1,170 @@
+[2024-12-03 13:39:07,563][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - 模型加载成功！......
+
+[2024-12-03 13:39:07,563][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - MetaGraphModel(
+  (base_model): GraphADT(
+    (fc): Sequential(
+      (0): Linear(in_features=200, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (linear): Sequential(
+      (0): Linear(in_features=200, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (fc_g): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_g1): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_final): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=1, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_final1): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=1, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (relu): ReLU()
+    (activation): Sigmoid()
+    (softmax): Softmax(dim=1)
+    (fc3): Sequential(
+      (0): Linear(in_features=1, out_features=1, bias=True)
+      (1): Sigmoid()
+    )
+    (pool1): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool2): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool3): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool4): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool5): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool6): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool7): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool8): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (dim_transform0): Linear(in_features=93, out_features=128, bias=True)
+    (dim_transform1): Linear(in_features=43, out_features=128, bias=True)
+    (conv1): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv2): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv3): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv4): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv5): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv6): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv7): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv8): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+  )
+)

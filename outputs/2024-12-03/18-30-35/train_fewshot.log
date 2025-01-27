@@ -1,0 +1,251 @@
+[2024-12-03 18:30:36,339][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - 模型加载成功！......
+
+[2024-12-03 18:30:36,339][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - MetaGraphModel(
+  (base_model): GraphADT(
+    (fc): Sequential(
+      (0): Linear(in_features=200, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU()
+      (3): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (linear): Sequential(
+      (0): Linear(in_features=200, out_features=512, bias=True)
+      (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (fc_g): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_g1): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=256, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_final): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=1, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (fc_final1): Sequential(
+      (0): GINWithKAN(
+        (gin_conv): GINConv(nn=Sequential(
+          (0): Linear(in_features=256, out_features=1, bias=True)
+        ))
+        (kan_layer): KANLinear(
+          (base_activation): Identity()
+        )
+      )
+    )
+    (relu): ReLU()
+    (activation): Sigmoid()
+    (softmax): Softmax(dim=1)
+    (fc3): Sequential(
+      (0): Linear(in_features=1, out_features=1, bias=True)
+      (1): Sigmoid()
+    )
+    (pool1): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool2): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool3): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool4): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool5): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool6): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool7): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (pool8): MVPool(
+      (sparse_attention): Sparsemax()
+      (calc_pagerank_score): PageRankScore(128)
+      (select_topk): SelectTopK(128, ratio=0.8)
+    )
+    (dim_transform0): Linear(in_features=93, out_features=128, bias=True)
+    (dim_transform1): Linear(in_features=43, out_features=128, bias=True)
+    (conv1): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv2): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv3): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv4): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv5): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv6): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv7): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+    (conv8): GINWithKAN(
+      (gin_conv): GINConv(nn=Sequential(
+        (0): Linear(in_features=128, out_features=128, bias=True)
+      ))
+      (kan_layer): KANLinear(
+        (base_activation): Identity()
+      )
+    )
+  )
+)
+[2024-12-03 18:42:54,368][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.6045, 0.7188, 0.749]
+[2024-12-03 18:42:54,374][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.6908,0.6648,0.6998
+[2024-12-03 18:54:59,286][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7627, 0.7305, 0.7373]
+[2024-12-03 18:54:59,286][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7435,0.6953,0.7391
+[2024-12-03 19:07:06,751][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7334, 0.8389, 0.6494]
+[2024-12-03 19:07:06,756][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7406,0.685,0.7309
+[2024-12-03 19:19:18,740][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.6797, 0.834, 0.7539]
+[2024-12-03 19:19:18,745][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7559,0.6605,0.7421
+[2024-12-03 19:31:22,282][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8232, 0.8135, 0.7734]
+[2024-12-03 19:31:22,286][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8034,0.7558,0.7745
+[2024-12-03 19:43:30,857][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7783, 0.7754, 0.8027]
+[2024-12-03 19:43:30,862][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7855,0.7264,0.7978
+[2024-12-03 19:55:39,100][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8633, 0.7627, 0.8984]
+[2024-12-03 19:55:39,105][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8415,0.7902,0.8043
+[2024-12-03 20:07:49,285][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8047, 0.8926, 0.8486]
+[2024-12-03 20:07:49,290][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8486,0.7544,0.8289
+[2024-12-03 20:19:57,536][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8154, 0.8574, 0.7275]
+[2024-12-03 20:19:57,538][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8001,0.7478,0.7941
+[2024-12-03 20:32:10,811][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8252, 0.8623, 0.8799]
+[2024-12-03 20:32:10,812][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8558,0.7639,0.866
+[2024-12-03 20:44:31,671][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7051, 0.8135, 0.873]
+[2024-12-03 20:44:31,673][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7972,0.7333,0.7972
+[2024-12-03 20:56:50,062][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8682, 0.8633, 0.793]
+[2024-12-03 20:56:50,066][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8415,0.7366,0.8548
+[2024-12-03 21:09:01,733][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8115, 0.835, 0.7285]
+[2024-12-03 21:09:01,738][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7917,0.7492,0.7727
+[2024-12-03 21:21:18,186][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7871, 0.7979, 0.8193]
+[2024-12-03 21:21:18,191][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8014,0.7199,0.821
+[2024-12-03 21:33:30,063][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.6875, 0.8428, 0.8418]
+[2024-12-03 21:33:30,068][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7907,0.7473,0.7655
+[2024-12-03 21:45:54,944][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7959, 0.8926, 0.7744]
+[2024-12-03 21:45:54,945][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.821,0.7605,0.8187
+[2024-12-03 21:58:18,795][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7461, 0.8037, 0.7764]
+[2024-12-03 21:58:18,797][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7754,0.704,0.7831
+[2024-12-03 22:10:39,765][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7959, 0.915, 0.8994]
+[2024-12-03 22:10:39,769][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8701,0.7756,0.8641
+[2024-12-03 22:23:00,180][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8076, 0.8818, 0.8096]
+[2024-12-03 22:23:00,182][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.833,0.7653,0.8239
+[2024-12-03 22:35:16,942][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7822, 0.877, 0.8223]
+[2024-12-03 22:35:16,947][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8271,0.759,0.8198
+[2024-12-03 22:47:35,108][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7314, 0.9277, 0.8555]
+[2024-12-03 22:47:35,113][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8382,0.7513,0.8341
+[2024-12-03 23:00:05,981][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7705, 0.8418, 0.6787]
+[2024-12-03 23:00:05,982][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7637,0.6835,0.773
+[2024-12-03 23:12:23,879][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7441, 0.8643, 0.8838]
+[2024-12-03 23:12:23,883][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8307,0.7677,0.8504
+[2024-12-03 23:24:40,896][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7578, 0.8242, 0.873]
+[2024-12-03 23:24:40,897][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8184,0.7459,0.8329
+[2024-12-03 23:37:18,051][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7188, 0.8467, 0.7529]
+[2024-12-03 23:37:18,055][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7728,0.6924,0.7605
+[2024-12-03 23:49:43,928][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8916, 0.833, 0.8936]
+[2024-12-03 23:49:43,933][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8727,0.7852,0.8663
+[2024-12-04 00:02:09,697][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8047, 0.8721, 0.8936]
+[2024-12-04 00:02:09,702][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8568,0.7772,0.8453
+[2024-12-04 00:14:27,226][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7559, 0.8682, 0.8135]
+[2024-12-04 00:14:27,231][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8125,0.7411,0.8061
+[2024-12-04 00:26:48,121][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.791, 0.876, 0.8105]
+[2024-12-04 00:26:48,126][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8258,0.7888,0.8244
+[2024-12-04 00:39:21,108][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8633, 0.9199, 0.8857]
+[2024-12-04 00:39:21,112][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8896,0.7771,0.882
+[2024-12-04 00:52:12,660][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7881, 0.8359, 0.833]
+[2024-12-04 00:52:12,665][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.819,0.7747,0.8239
+[2024-12-04 01:04:37,778][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7354, 0.8418, 0.7871]
+[2024-12-04 01:04:37,783][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7881,0.6975,0.7906
+[2024-12-04 01:16:59,759][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7295, 0.8896, 0.7559]
+[2024-12-04 01:16:59,764][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7917,0.7521,0.7777
+[2024-12-04 01:29:20,057][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7998, 0.8135, 0.9219]
+[2024-12-04 01:29:20,059][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8451,0.8131,0.84
+[2024-12-04 01:41:42,196][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.6885, 0.8701, 0.8223]
+[2024-12-04 01:41:42,201][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7936,0.7191,0.8006
+[2024-12-04 01:54:04,235][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7695, 0.8379, 0.7607]
+[2024-12-04 01:54:04,237][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.7894,0.7612,0.7847
+[2024-12-04 02:06:22,137][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7334, 0.8643, 0.8926]
+[2024-12-04 02:06:22,143][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8301,0.7745,0.8611
+[2024-12-04 02:18:48,623][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.7559, 0.8818, 0.8438]
+[2024-12-04 02:18:48,629][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8271,0.7323,0.824
+[2024-12-04 02:31:09,635][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8125, 0.8154, 0.8271]
+[2024-12-04 02:31:09,636][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8184,0.7366,0.8218
+[2024-12-04 02:43:28,475][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - downstream task aucs: [0.8359, 0.8379, 0.8232]
+[2024-12-04 02:43:28,480][/root/codes/MolFeSCue-master-2/fsadmet/utils/std_logger.py][INFO] - mean downstream task mean auc、f1、pr_auc: 0.8324,0.7955,0.8093
+[2024-12-04 02:43:28,491][nni][INFO] - Final result: {'default_auc': 0.8896, 'f1': 0.7771, 'pr_auc': 0.882}

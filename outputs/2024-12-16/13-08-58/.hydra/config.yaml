@@ -1,0 +1,126 @@
+mode:
+  nni: false
+data:
+  path: ./data
+  dataset: tox21
+  num_bond_features: 2
+  num_atom_features: 2
+  num_workers: 2
+model:
+  backbone: gnn
+  gnn:
+    pretrained: /root/codes/MolFeSCue-master-2/fsadmet/data/pretrained/masking.pth
+    gnn_type: gin
+    num_layer: 3
+    emb_dim: 300
+    JK: max
+    dropout_ratio: 0.1
+    graph_pooling: max
+    JK_coo_attention: max
+  seq:
+    pretrained: /root/codes/MolFeSCue-master-2/fsadmet/data/pretrained/ChemBERTa-zinc-base-v1
+device:
+  cuda: 0
+meta:
+  num_atoms: 119
+  selfsupervised_weight: 0
+  contrastive_weight: 0.1
+  alpha_s: 1
+  alpha_e: 0.2
+  beta: 0.1
+train:
+  random_seed: 7
+  epochs: 2000
+  batch_size: 64
+  meta_lr: 0.001
+  update_lr: 0.01
+  decay: 0
+  update_step: 1
+  update_step_test: 1
+  eval_epoch: 520
+tasks:
+  name: tox21
+  tox21:
+    num_tasks: 12
+    train_tasks:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    test_tasks:
+    - 9
+    - 10
+    - 11
+    n_way: 2
+    m_support: 10
+    k_query: 64
+  sider:
+    num_tasks: 27
+    train_tasks:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    test_tasks:
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    n_way: 2
+    m_support: 10
+    k_query: 32
+  muv:
+    num_tasks: 17
+    train_tasks:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    test_tasks:
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    n_way: 2
+    m_support: 10
+    k_query: 32
+logger:
+  log: false
+  log_dir: outputs
+  mlflow:
+    MLFLOW_TRACKING_URI: http://127.0.0.1:8889
+    MLFLOW_EXPERIMENT_NAME: FSADMET
+    REGISTERED_MODEL_NAME: fsadmet
